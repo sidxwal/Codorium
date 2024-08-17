@@ -1,0 +1,114 @@
+nav {
+    position: fixed;
+    background-color: #111827f6;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 80px); /* Adjust based on margin */
+    margin: 0 auto; /* Center horizontally */
+    padding: 2vw 4vw;
+    justify-content: center; /* Center the content inside the navbar */
+    top: 25px;
+    border-radius: 50px;
+    z-index: 1000;
+    left: 40px; /* Adjust according to margin */
+    right: 40px; /* Adjust according to margin */
+}
+
+.nav-centre {
+    display: flex;
+    gap: 3vw;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+nav h1 {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-right: 4vw;
+}
+
+.nav-centre a {
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    /* padding: 4px; */
+    border-radius: 5px;
+}
+
+.nav-centre a:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Hamburger Menu */
+.ham-menu {
+    display: none;
+    /* Hide by default */
+    height: 30px;
+    width: 30px;
+    margin-left: auto;
+    position: relative;
+}
+
+.ham-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: #6F86FF;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+
+.ham-menu.active span {
+    background-color: white;
+}
+
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Off-Screen Menu */
+.off-screen-menu {
+    background-color: rgb(34, 37, 49);
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3s ease;
+}
+
+.off-screen-menu.active {
+    right: 0;
+}
